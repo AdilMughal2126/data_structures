@@ -1,13 +1,14 @@
-from Arrays.Array import Array
+from LinkedList.LinkedList import LinkedList
 
-array = Array(5)
-array.insert(10)
-array.insert(20)
-array.insert(30)
-array.insert(50)
-array.insert(60)
-array.insert(70)
-array.remove_at(0)
+list_array = LinkedList()
+list_array.add_last(10)
+list_array.add_last(20)
+list_array.add_last(30)
+list_array.add_last(70)
+list_array.delete_last()
+list_array.print_list()
 
-print(array.index_of(90))
-array.print()
+
+
+
+
