@@ -3,6 +3,7 @@ class Node:
         self.value = value
         self.next = None
 
+
 class LinkedList:
     def __init__(self):
         self.first = None
@@ -80,18 +81,22 @@ class LinkedList:
         self.last = self.first
         self.first = prev
 
+    def get_kth_node_from_end(self, k):
+        if k <= 0:
+            return
 
+        first = second = self.first
 
+        for i in range(0, k):
+            second = second.next
+            if second is None:
+                return
 
+        while second is not None:
+            first = first.next
+            second = second.next
 
-
-
-
-
-
-
-
-
+        return first.value
 
     def print_list(self):
         temp = self.first
