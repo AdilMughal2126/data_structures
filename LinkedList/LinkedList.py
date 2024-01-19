@@ -67,6 +67,32 @@ class LinkedList:
             count += 1
         return -1
 
+    def reverse(self):
+        current = self.first
+        prev = None
+
+        while current != None:
+            next = current.next
+            current.next = prev
+            prev = current
+            current = next
+
+        self.last = self.first
+        self.first = prev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     def print_list(self):
         temp = self.first
         while temp is not None:
