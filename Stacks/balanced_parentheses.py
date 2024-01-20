@@ -19,7 +19,6 @@ def validate_parentheses(input_str):
     for element in input_str:
         if is_left_bracket(element):
             stack.append(element)
-
         if is_right_bracket(element):
             if len(stack) == 0:
                 return False
