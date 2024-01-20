@@ -1,4 +1,4 @@
-from queue import Queue
+from ArrayQueue import Queue
 
 numbers = Queue()
 numbers.put(1)

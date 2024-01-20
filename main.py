@@ -1,14 +1,12 @@
-from Stacks.Stack import Stack
+from Queues.ArrayQueue import ArrayQueue
 
-stack = Stack()
-stack.push(1)
-stack.push(2)
-stack.push(3)
+array_queue = ArrayQueue(5)
+array_queue.enqueue(1)
+array_queue.enqueue(2)
+array_queue.enqueue(3)
+array_queue.enqueue(4)
+array_queue.enqueue(5)
 
-print(stack.pop())
-
-
-
-
-
+print(array_queue.dequeue())
+print(array_queue.dequeue())
 
