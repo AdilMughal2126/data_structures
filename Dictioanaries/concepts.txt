@@ -1,0 +1,31 @@
+Collisions:
+    when the hashing function produce the index which is already filled than there exists a collision in Hashmaps.
+    k1-----
+            <-same address
+    k2-----
+
+There ars several methods to handle this situation.Below are the explanation of each of them:
+1. Linear Probing:
+    When a collision occurs, linear probing searches for the next available slot in a linear manner.
+    It starts from the collision point and looks at consecutive positions until an empty slot is found.
+    The probe sequence is often defined as hash(key) + i for i in the range [0, array_size - 1].
+
+    formula: hash(key) + i
+
+2. Quadratic probing:
+    Quadratic probing is another technique used to resolve collisions in hash tables.
+    Like linear probing, it deals with collisions by searching for the next available slot.
+    However, instead of linearly probing through consecutive slots, quadratic probing uses a quadratic function
+    to determine the next probing position.
+
+    formula: (hash(key) + i^2) % table_size
+
+3. Double Hashing:
+   Double hashing is another collision resolution technique used in hash tables.
+
+   Formula:
+   (hash1(key) + i * hash2(key)) % table_size
+   where hash2(key) = prime - (key % prime)
+   where hash2(key) = key % table_size
+   where prime is any prime number between the range of table_size
+
